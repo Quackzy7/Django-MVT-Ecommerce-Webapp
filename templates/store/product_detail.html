@@ -7,7 +7,11 @@
 {% include 'navbar.html' %}
 
 <main class="product-detail-container">
-
+    <div class="product-images">
+    {% for img in product.images.all %}
+        <img src="{{ img.image.url }}" alt="{{ img.alt_text }}" width="200">
+    {% endfor %}
+    </div>
     <div class="product-detail-card">
         <!-- Product Info -->
         <div class="product-info">

@@ -126,3 +126,5 @@ STATICFILES_DIRS = [
 
 AUTH_USER_MODEL = 'store.CustomUser'
 
+MEDIA_URL='media/'
+MEDIA_ROOT=BASE_DIR/'media'

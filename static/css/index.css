@@ -313,3 +313,85 @@ nav {
 .nav-refs {
     gap: 1.5rem;
 }
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(to right, #2f8f8f, #1e6161);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+}
+
+
+/* FEATURED SECTION */
+.featured {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.featured h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #2f8f8f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #1e6161;
+}

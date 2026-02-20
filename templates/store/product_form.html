@@ -18,7 +18,7 @@
         </ul>
     {% endif %}
 
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
       
@@ -36,9 +36,24 @@
             </div>
         {% endfor %}
 
+        <input type="file" name="images" multiple>
+
         <button type="submit">Submit</button>
     </form>
 
 </div>
+
+
+
+{%if product%}
+<hr>
+<h3>Current Images</h3>
+{% for img in product.images.all %}
+    <div>
+        <img src="{{ img.image.url }}" width="120">
+        
+    </div>
+{% endfor %}
+{% endif %}
 
 {% endblock %}
