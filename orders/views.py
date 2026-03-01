@@ -18,16 +18,15 @@ def checkout(request):
     if request.method == "POST":
         payment_method = request.POST.get("payment_method")
         shipping_address = request.POST.get("shipping_address", "").strip()
-        if buyer_profile:
-            buyer_profile.shipping_address = shipping_address
-            buyer_profile.save()
-        else:
+       
+        if not buyer_profile:
             buyer_profile = BuyerProfile.objects.create(
                 user=request.user,
-                shipping_address=shipping_address
+                address=shipping_address
             )
         order = Order.objects.create(
         user=request.user,
+        shipping_address=shipping_address
         )
         total=0
         for item in cart.items.all():

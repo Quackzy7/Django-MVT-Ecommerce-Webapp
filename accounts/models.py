@@ -24,4 +24,4 @@ class SellerProfile(models.Model):
 
 class BuyerProfile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    shipping_address = models.TextField()
+    address = models.TextField()

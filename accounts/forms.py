@@ -18,7 +18,7 @@ class BuyerSignUpForm(UserCreationForm):
     phone_number = forms.CharField(
         widget=forms.TextInput(attrs={'class': TW, 'placeholder': 'e.g. 9800000000'})
     )
-    shipping_address = forms.CharField(
+    address = forms.CharField(
         widget=forms.Textarea(attrs={'class': TW, 'rows': 2, 'placeholder': 'Street, City, State, PIN'})
     )
 
@@ -45,7 +45,7 @@ class BuyerSignUpForm(UserCreationForm):
             user.save()
             BuyerProfile.objects.create(
                 user=user,
-                shipping_address=self.cleaned_data['shipping_address']
+                address=self.cleaned_data['address']
             )
         return user
 

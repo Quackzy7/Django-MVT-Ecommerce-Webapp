@@ -18,7 +18,7 @@ class Order(models.Model):
     )
     overall_status = models.CharField(max_length=30, choices=OVERALL_STATUS, default="pending")
     created_at=models.DateTimeField(auto_now_add=True)
-
+    shipping_address = models.TextField()
     def __str__(self):
         return f"Order #{self.id} - {self.user.username}"
     def update_overall_status(self):
